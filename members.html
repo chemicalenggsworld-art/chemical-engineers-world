@@ -1,32 +1,61 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Members Area - Chemical Engineers World</title>
+    <title>Admin Dashboard - Chemical Engineers World</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <style>
         body {
             margin: 0;
-            font-family: Arial, sans-serif;
+            font-family: 'Segoe UI', sans-serif;
             background-color: #f4f7fa;
             text-align: center;
         }
 
-        .container {
-            padding: 60px 20px;
+        .navbar {
+            background: white;
+            padding: 15px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
         }
 
-        h1 {
+        .container {
+            margin-top: 80px;
+        }
+
+        .card-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .card {
+            background: white;
+            width: 250px;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+        }
+
+        .card a {
+            text-decoration: none;
             color: #0077b6;
+            font-weight: bold;
         }
 
         button {
+            margin-top: 40px;
             padding: 10px 20px;
             background: #0077b6;
             color: white;
             border: none;
             cursor: pointer;
-            margin-top: 20px;
         }
 
         button:hover {
@@ -37,15 +66,38 @@
 
 <body>
 
+    <div class="navbar">
+        <h2>Admin Dashboard</h2>
+    </div>
+
     <div class="container">
-        <h1>Welcome to Members Area</h1>
-        <p>This section is accessible only to logged-in members.</p>
+        <h1>Welcome Admin</h1>
+        <p>Quick Access Tools</p>
+
+        <div class="card-container">
+
+            <div class="card">
+                <h3>📧 Gmail</h3>
+                <a href="https://mail.google.com" target="_blank">Open Gmail</a>
+            </div>
+
+            <div class="card">
+                <h3>📂 Google Drive</h3>
+                <a href="https://drive.google.com" target="_blank">Open Drive</a>
+            </div>
+
+            <div class="card">
+                <h3>📝 Google Forms</h3>
+                <a href="https://forms.google.com" target="_blank">Open Forms</a>
+            </div>
+
+        </div>
 
         <button onclick="logout()">Logout</button>
     </div>
 
     <script>
-        // Check login
+        // Protect page
         if(localStorage.getItem("loggedIn") !== "true") {
             window.location.href = "login.html";
         }
