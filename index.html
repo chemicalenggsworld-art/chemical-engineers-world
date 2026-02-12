@@ -4,55 +4,84 @@
     <title>Chemical Engineers World</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
+
         body {
             margin: 0;
-            font-family: Arial, sans-serif;
+            font-family: 'Segoe UI', sans-serif;
             background-color: #f4f7fa;
         }
 
         /* NAVBAR */
         .navbar {
-            background-color: white;
+            position: sticky;
+            top: 0;
+            background: white;
             padding: 15px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
             text-align: center;
+            z-index: 1000;
         }
 
         .navbar a {
             margin: 15px;
             text-decoration: none;
             color: #333;
-            font-weight: bold;
+            font-weight: 600;
+            transition: 0.3s;
         }
 
         .navbar a:hover {
             color: #0077b6;
         }
 
-        /* HERO SECTION */
+        /* HERO */
         .hero {
-            background: url('https://images.unsplash.com/photo-1581091215367-59ab6c4e5f8b') no-repeat center center/cover;
+            position: relative;
+            background: url('https://images.unsplash.com/photo-1509395176047-4a66953fd231') no-repeat center center/cover;
+            height: 90vh;
             color: white;
-            padding: 100px 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
             text-align: center;
+            padding: 20px;
+        }
+
+        .hero::before {
+            content: "";
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.6);
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            animation: fadeIn 2s ease;
         }
 
         .hero h1 {
-            font-size: 45px;
+            font-size: 48px;
+            margin-bottom: 15px;
         }
 
         .hero p {
             font-size: 20px;
+            max-width: 700px;
+            margin: auto;
         }
 
-        /* SECTION */
+        /* SECTIONS */
         .section {
-            padding: 50px 20px;
+            padding: 70px 20px;
             text-align: center;
         }
 
         .section h2 {
             margin-bottom: 20px;
+            font-size: 32px;
         }
 
         /* FEATURES */
@@ -61,26 +90,32 @@
             justify-content: center;
             flex-wrap: wrap;
             gap: 30px;
+            margin-top: 40px;
         }
 
         .feature-box {
             background: white;
-            padding: 20px;
-            width: 250px;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            padding: 25px;
+            width: 260px;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: 0.3s;
         }
 
-        /* FLOATING BLOG CARD */
+        .feature-box:hover {
+            transform: translateY(-8px);
+        }
+
+        /* FLOATING BLOG */
         .floating-blog {
             position: fixed;
             bottom: 20px;
             right: 20px;
             background: white;
             padding: 15px;
-            width: 250px;
-            border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+            width: 260px;
+            border-radius: 12px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.2);
         }
 
         .floating-blog h4 {
@@ -91,33 +126,39 @@
             display: block;
             text-decoration: none;
             color: #0077b6;
-            margin-bottom: 5px;
+            margin-bottom: 6px;
+            transition: 0.2s;
         }
 
         .floating-blog a:hover {
-            text-decoration: underline;
+            color: #023e8a;
         }
 
         /* FOOTER */
         footer {
-            background: #222;
+            background: #111;
             color: white;
-            padding: 20px;
+            padding: 30px;
             text-align: center;
         }
 
-        @media (max-width: 768px) {
-            .features {
-                flex-direction: column;
-                align-items: center;
+        /* ANIMATION */
+        @keyframes fadeIn {
+            from {opacity: 0; transform: translateY(20px);}
+            to {opacity: 1; transform: translateY(0);}
+        }
+
+        @media(max-width: 768px) {
+            .hero h1 {
+                font-size: 32px;
             }
         }
+
     </style>
 </head>
 
 <body>
 
-    <!-- NAVBAR -->
     <div class="navbar">
         <a href="#">Home</a>
         <a href="#">Notes</a>
@@ -126,14 +167,14 @@
         <a href="#">Contact</a>
     </div>
 
-    <!-- HERO SECTION -->
     <div class="hero">
-        <h1>Chemical Engineers World</h1>
-        <p>Notes, Blogs, Competitions & Resources – All in One Place.</p>
-        <p>Welcome to your Chemical Engineering Resource Hub! This platform is built for students, by Students, to provide the tools you need for success.</p>
+        <div class="hero-content">
+            <h1>Chemical Engineers World</h1>
+            <p>Notes, Blogs, Competitions & Resources – All in One Place.</p>
+            <p>Welcome to your Chemical Engineering Resource Hub! This platform is built for students, by Students, to provide the tools you need for success.</p>
+        </div>
     </div>
 
-    <!-- ABOUT SECTION -->
     <div class="section">
         <h2>About Us</h2>
         <p>
@@ -143,7 +184,6 @@
         </p>
     </div>
 
-    <!-- FEATURES SECTION -->
     <div class="section">
         <h2>Our Features</h2>
         <div class="features">
@@ -166,7 +206,6 @@
         </div>
     </div>
 
-    <!-- FLOATING BLOG CARD -->
     <div class="floating-blog">
         <h4>Latest Blogs</h4>
         <a href="#">Heat Exchanger Design Basics</a>
@@ -175,7 +214,6 @@
         <a href="#"><strong>View All Blogs</strong></a>
     </div>
 
-    <!-- FOOTER -->
     <footer>
         <p>Chemical Engineer</p>
         <p>chemicalenggsworld@gmail.com</p>
