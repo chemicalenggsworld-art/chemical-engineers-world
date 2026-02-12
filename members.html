@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Members Area - Chemical Engineers World</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4f7fa;
+            text-align: center;
+        }
+
+        .container {
+            padding: 60px 20px;
+        }
+
+        h1 {
+            color: #0077b6;
+        }
+
+        button {
+            padding: 10px 20px;
+            background: #0077b6;
+            color: white;
+            border: none;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+
+        button:hover {
+            background: #023e8a;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>Welcome to Members Area</h1>
+        <p>This section is accessible only to logged-in members.</p>
+
+        <button onclick="logout()">Logout</button>
+    </div>
+
+    <script>
+        // Check login
+        if(localStorage.getItem("loggedIn") !== "true") {
+            window.location.href = "login.html";
+        }
+
+        function logout() {
+            localStorage.removeItem("loggedIn");
+            window.location.href = "login.html";
+        }
+    </script>
+
+</body>
+</html>
