@@ -3,6 +3,7 @@
 <head>
     <title>Chemical Engineers World</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <style>
 
         body {
@@ -34,10 +35,10 @@
             color: #0077b6;
         }
 
-        /* HERO */
+        /* HERO SECTION */
         .hero {
             position: relative;
-            background: url('https://images.unsplash.com/photo-1509395176047-4a66953fd231') no-repeat center center/cover;
+            background: url('images/hero.png') no-repeat center center/cover;
             height: 90vh;
             color: white;
             display: flex;
@@ -50,15 +51,17 @@
         .hero::before {
             content: "";
             position: absolute;
-            top: 0; left: 0;
             width: 100%;
             height: 100%;
             background: rgba(0,0,0,0.6);
+            top: 0;
+            left: 0;
         }
 
         .hero-content {
             position: relative;
             z-index: 1;
+            max-width: 800px;
             animation: fadeIn 2s ease;
         }
 
@@ -69,19 +72,42 @@
 
         .hero p {
             font-size: 20px;
-            max-width: 700px;
-            margin: auto;
         }
 
         /* SECTIONS */
         .section {
             padding: 70px 20px;
-            text-align: center;
         }
 
         .section h2 {
-            margin-bottom: 20px;
+            text-align: center;
             font-size: 32px;
+            margin-bottom: 40px;
+        }
+
+        /* ABOUT SECTION */
+        .about-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 40px;
+            max-width: 1100px;
+            margin: auto;
+            flex-wrap: wrap;
+        }
+
+        .about-text {
+            flex: 1;
+            min-width: 300px;
+            font-size: 18px;
+            line-height: 1.6;
+        }
+
+        .about-img {
+            flex: 1;
+            max-width: 400px;
+            border-radius: 12px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
         }
 
         /* FEATURES */
@@ -90,7 +116,6 @@
             justify-content: center;
             flex-wrap: wrap;
             gap: 30px;
-            margin-top: 40px;
         }
 
         .feature-box {
@@ -100,13 +125,14 @@
             border-radius: 12px;
             box-shadow: 0 5px 15px rgba(0,0,0,0.1);
             transition: 0.3s;
+            text-align: center;
         }
 
         .feature-box:hover {
             transform: translateY(-8px);
         }
 
-        /* FLOATING BLOG */
+        /* FLOATING BLOG CARD */
         .floating-blog {
             position: fixed;
             bottom: 20px;
@@ -159,6 +185,7 @@
 
 <body>
 
+    <!-- NAVBAR -->
     <div class="navbar">
         <a href="#">Home</a>
         <a href="#">Notes</a>
@@ -167,6 +194,7 @@
         <a href="#">Contact</a>
     </div>
 
+    <!-- HERO -->
     <div class="hero">
         <div class="hero-content">
             <h1>Chemical Engineers World</h1>
@@ -175,15 +203,20 @@
         </div>
     </div>
 
+    <!-- ABOUT -->
     <div class="section">
         <h2>About Us</h2>
-        <p>
-            This is a freelance service run by a chemical engineering student. On this website, you will find complete study material for chemical engineering including syllabus, notes, and important information for GATE CH preparation.
-            We also provide a blog section where visitors can share their experiences in the chemical industry and colleges.
-            In addition, we organize various competitions and quizzes for students completely free of cost.
-        </p>
+        <div class="about-container">
+            <div class="about-text">
+                This is a freelance service run by a chemical engineering student. On this website, you will find complete study material for chemical engineering including syllabus, notes, and important information for GATE CH preparation.
+                We also provide a blog section where visitors can share their experiences in the chemical industry and colleges.
+                In addition, we organize various competitions and quizzes for students completely free of cost.
+            </div>
+            <img src="images/about.png" alt="About Image" class="about-img">
+        </div>
     </div>
 
+    <!-- FEATURES -->
     <div class="section">
         <h2>Our Features</h2>
         <div class="features">
@@ -206,6 +239,7 @@
         </div>
     </div>
 
+    <!-- FLOATING BLOG -->
     <div class="floating-blog">
         <h4>Latest Blogs</h4>
         <a href="#">Heat Exchanger Design Basics</a>
@@ -214,6 +248,7 @@
         <a href="#"><strong>View All Blogs</strong></a>
     </div>
 
+    <!-- FOOTER -->
     <footer>
         <p>Chemical Engineer</p>
         <p>chemicalenggsworld@gmail.com</p>
