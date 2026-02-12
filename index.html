@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Chemical Engineers World</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4f7fa;
+        }
+
+        /* NAVBAR */
+        .navbar {
+            background-color: white;
+            padding: 15px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        .navbar a {
+            margin: 15px;
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+        }
+
+        .navbar a:hover {
+            color: #0077b6;
+        }
+
+        /* HERO SECTION */
+        .hero {
+            background: url('https://images.unsplash.com/photo-1581091215367-59ab6c4e5f8b') no-repeat center center/cover;
+            color: white;
+            padding: 100px 20px;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 45px;
+        }
+
+        .hero p {
+            font-size: 20px;
+        }
+
+        /* SECTION */
+        .section {
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        .section h2 {
+            margin-bottom: 20px;
+        }
+
+        /* FEATURES */
+        .features {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+
+        .feature-box {
+            background: white;
+            padding: 20px;
+            width: 250px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        /* FLOATING BLOG CARD */
+        .floating-blog {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: white;
+            padding: 15px;
+            width: 250px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        }
+
+        .floating-blog h4 {
+            margin-top: 0;
+        }
+
+        .floating-blog a {
+            display: block;
+            text-decoration: none;
+            color: #0077b6;
+            margin-bottom: 5px;
+        }
+
+        .floating-blog a:hover {
+            text-decoration: underline;
+        }
+
+        /* FOOTER */
+        footer {
+            background: #222;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        @media (max-width: 768px) {
+            .features {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <div class="navbar">
+        <a href="#">Home</a>
+        <a href="#">Notes</a>
+        <a href="#">Competition</a>
+        <a href="#">Blogs</a>
+        <a href="#">Contact</a>
+    </div>
+
+    <!-- HERO SECTION -->
+    <div class="hero">
+        <h1>Chemical Engineers World</h1>
+        <p>Notes, Blogs, Competitions & Resources – All in One Place.</p>
+        <p>Welcome to your Chemical Engineering Resource Hub! This platform is built for students, by Students, to provide the tools you need for success.</p>
+    </div>
+
+    <!-- ABOUT SECTION -->
+    <div class="section">
+        <h2>About Us</h2>
+        <p>
+            This is a freelance service run by a chemical engineering student. On this website, you will find complete study material for chemical engineering including syllabus, notes, and important information for GATE CH preparation.
+            We also provide a blog section where visitors can share their experiences in the chemical industry and colleges.
+            In addition, we organize various competitions and quizzes for students completely free of cost.
+        </p>
+    </div>
+
+    <!-- FEATURES SECTION -->
+    <div class="section">
+        <h2>Our Features</h2>
+        <div class="features">
+            <div class="feature-box">
+                <h3>📘 Free Notes</h3>
+                <p>Complete study materials for Chemical Engineering.</p>
+            </div>
+            <div class="feature-box">
+                <h3>🎯 GATE CH</h3>
+                <p>Focused preparation resources for GATE Chemical.</p>
+            </div>
+            <div class="feature-box">
+                <h3>🧠 Concept Learning</h3>
+                <p>Understand fundamentals clearly and effectively.</p>
+            </div>
+            <div class="feature-box">
+                <h3>📝 Free Competitions</h3>
+                <p>Participate in quizzes and improve your skills.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- FLOATING BLOG CARD -->
+    <div class="floating-blog">
+        <h4>Latest Blogs</h4>
+        <a href="#">Heat Exchanger Design Basics</a>
+        <a href="#">My Internship in Refinery</a>
+        <a href="#">How I Prepared for GATE CH</a>
+        <a href="#"><strong>View All Blogs</strong></a>
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>Chemical Engineer</p>
+        <p>chemicalenggsworld@gmail.com</p>
+    </footer>
+
+</body>
+</html>
