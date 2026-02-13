@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Member Dashboard</title>
+</head>
+<body>
+
+<h1>Member Dashboard</h1>
+<p>Welcome, <span id="user"></span></p>
+
+<a href="premium-notes.html">Access Premium Notes</a>
+<br><br>
+<a href="notes.html">Public Notes</a>
+<br><br>
+<a href="competition.html">Competitions</a>
+<br><br>
+<button onclick="logout()">Logout</button>
+
+<script>
+    if(localStorage.getItem("role") !== "member") {
+        window.location.href = "login.html";
+    }
+
+    document.getElementById("user").innerText = localStorage.getItem("username");
+
+    function logout() {
+        localStorage.clear();
+        window.location.href = "login.html";
+    }
+</script>
+
+</body>
+</html>
