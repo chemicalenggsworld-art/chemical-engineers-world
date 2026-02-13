@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Premium Notes - Chemical Engineers World</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', sans-serif;
+            background-color: #f4f7fa;
+        }
+
+        .navbar {
+            background: white;
+            padding: 15px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        .navbar a {
+            margin: 15px;
+            text-decoration: none;
+            color: #333;
+            font-weight: 600;
+        }
+
+        .title {
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 30px;
+            padding: 20px;
+        }
+
+        .card {
+            background: white;
+            width: 280px;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        .card a {
+            display: inline-block;
+            margin-top: 15px;
+            text-decoration: none;
+            background: #0077b6;
+            color: white;
+            padding: 10px 15px;
+            border-radius: 6px;
+        }
+
+        footer {
+            background: #111;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="navbar">
+        <a href="index.html">Home</a>
+        <a href="notes.html">Notes</a>
+        <a href="competition.html">Competition</a>
+        <a href="blogs.html">Blogs</a>
+        <a href="login.html">Login</a>
+    </div>
+
+    <div class="title">
+        <h1>Premium Notes</h1>
+        <p>Exclusive content for members only</p>
+    </div>
+
+    <div class="container">
+
+        <div class="card">
+            <h3>Advanced Thermodynamics</h3>
+            <p>Premium Problem Solving Notes</p>
+            <a href="https://drive.google.com/" target="_blank">Open Folder</a>
+        </div>
+
+        <div class="card">
+            <h3>Complete GATE Crash Notes</h3>
+            <p>Short Notes + Important Formulas</p>
+            <a href="https://drive.google.com/" target="_blank">Open Folder</a>
+        </div>
+
+    </div>
+
+    <footer>
+        <p>Chemical Engineer</p>
+        <p>chemicalenggsworld@gmail.com</p>
+    </footer>
+
+    <script>
+        // Protect Page
+        if(localStorage.getItem("loggedIn") !== "true") {
+            alert("Please login to access Premium Notes");
+            window.location.href = "login.html";
+        }
+    </script>
+
+</body>
+</html>
