@@ -1,20 +1,119 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Member Dashboard</title>
+    <title>Member Dashboard - Chemical Engineers World</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', sans-serif;
+            background-color: #f4f7fa;
+        }
+
+        .navbar {
+            background: #0077b6;
+            color: white;
+            padding: 15px;
+            text-align: center;
+        }
+
+        .navbar span {
+            font-weight: bold;
+        }
+
+        .container {
+            padding: 40px;
+            text-align: center;
+        }
+
+        .card-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .card {
+            background: white;
+            width: 280px;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+        }
+
+        .card a {
+            display: inline-block;
+            margin-top: 15px;
+            text-decoration: none;
+            background: #0077b6;
+            color: white;
+            padding: 10px 15px;
+            border-radius: 6px;
+        }
+
+        .card a:hover {
+            background: #023e8a;
+        }
+
+        .logout-btn {
+            margin-top: 40px;
+            padding: 10px 20px;
+            background: crimson;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
 </head>
+
 <body>
 
-<h1>Member Dashboard</h1>
-<p>Welcome, <span id="user"></span></p>
+<div class="navbar">
+    Member Dashboard | Welcome <span id="user"></span>
+</div>
 
-<a href="premium-notes.html">Access Premium Notes</a>
-<br><br>
-<a href="notes.html">Public Notes</a>
-<br><br>
-<a href="competition.html">Competitions</a>
-<br><br>
-<button onclick="logout()">Logout</button>
+<div class="container">
+
+    <h1>Member Area</h1>
+
+    <div class="card-container">
+
+        <div class="card">
+            <h3>📘 Public Notes</h3>
+            <p>Access study materials</p>
+            <a href="notes.html">Open</a>
+        </div>
+
+        <div class="card">
+            <h3>🔐 Premium Notes</h3>
+            <p>Members Only Content</p>
+            <a href="premium-notes.html">Open</a>
+        </div>
+
+        <div class="card">
+            <h3>🏆 Competitions</h3>
+            <p>Participate in quizzes</p>
+            <a href="competition.html">Open</a>
+        </div>
+
+        <div class="card">
+            <h3>📝 Submit Blog</h3>
+            <p>Share your experience</p>
+            <a href="https://forms.google.com/" target="_blank">Submit</a>
+        </div>
+
+    </div>
+
+    <button class="logout-btn" onclick="logout()">Logout</button>
+
+</div>
 
 <script>
     if(localStorage.getItem("role") !== "member") {
